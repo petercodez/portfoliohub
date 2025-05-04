@@ -3,14 +3,22 @@
     padding: 0%;
 }
 
+/* FONTES */
 @font-face {
     font-family: 'TechnoRace';
     src: url(fonts/TechnoRace-Italic.otf);
+    
 }
 
+@font-face {
+    font-family: 'Roboto-VariableFont_wdth,wght';
+    src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+/* CABEÇALHO */
 header{
     background: #234175;
-    background: linear-gradient(180deg, rgba(35, 65, 117, 1) 0%, rgba(106, 9, 121, 1) 73%, rgb(122, 50, 140) 95%);
+    background: linear-gradient(180deg, rgb(35, 65, 117) 0%, rgb(106, 9, 121) 73%, rgb(122, 50, 140) 95%);
     height: 680px;
     position: relative;
 }
@@ -25,13 +33,28 @@ header h1{
     margin-top: 25px;
 }
 
+/* BANNER TRANSPARENTE NO TOPO DO SITE */
+#tr-banner{
+    width: 100%;
+    position: absolute;
+    opacity: 0.08;
+    clip-path: inset(0 0 10% 0);
+    mask-image: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 1) 0%,      /* Totalmente opaco no topo */
+    rgba(0, 0, 0, 1) 20%,     /* Permanece totalmente opaco até 70% da altura */
+    rgba(0, 0, 0, 0) 60%     /* Totalmente transparente na base */
+  );
+}
+
+/* GIF NO TOPO DO SITE */
 #banner-img{
     display: flex;
     justify-content: center;
     margin-top: 25px;
+    position: relative;
 }
 
-
+/* NAV + IMAGENS */
 nav img{
     width: 30px;
     padding: 10px;
@@ -54,9 +77,10 @@ nav a{
     color: rgb(255, 255, 255);
 }
 
+/* ONDA ROXA BORDA INFERIOR */
 .divider{
     aspect-ratio: 960/540;
-    background-repeat: no-repeat center;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
     position: absolute;
@@ -64,9 +88,162 @@ nav a{
     background-image: url(imgs/wave-haikei-correct.svg);
 }
 
-
-
+/* SOBRE MIM */
 #about-me{
-    margin-top: 300px;
+    margin-top: 320px;
     color: black;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 24px;
+    text-align: justify;
+    font-family: 'Roboto-VariableFont_wdth,wght';
 }
+
+/* ORGANIZACAO DOS CARDS */
+#card-controller{
+    background: #234175;
+    background: linear-gradient(90deg,rgba(35, 65, 117, 1) 0%, rgba(106, 9, 121, 1) 73%, rgba(122, 50, 140, 1) 95%);
+    margin-top: 130px;
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    gap: 60px;
+}
+
+#card-controller h1{
+    text-align: center !important;
+    font-family: 'TechnoRace';
+    position: absolute;
+    top: 171%;
+    font-size: 55px;
+    color: white;
+    
+}
+
+#card-1{
+    background-image: url(imgs/ia-card.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#card-2{
+    background-image: url(imgs/ue5-era-twitter.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#card-3{
+    background-image: url(imgs/web-programming-languages.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* @keyframes subtle-peek{
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(5deg); Gira ligeiramente para a direita
+    }
+    100% {
+      transform: rotateY(0deg);
+    }
+} */
+
+.card-container {
+    width: 300px; /* Defina a largura do seu card */
+    height: 400px; /* Defina a altura do seu card */
+    perspective: 1000px; /* Adiciona perspectiva para o efeito 3D */
+    margin: 20px; /* Apenas para demonstração de espaçamento */
+}
+  
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out; /* Adicionei um timing function para melhor transição */
+    /* Aplica a animação sutil por padrão */
+    /* animation: subtle-peek 3s infinite alternate; */
+}
+
+/* .card-container:not(:hover) .card {
+    animation: subtle-peek 3s infinite alternate;
+} */
+  
+.card-container:hover .card {
+    transform: rotateY(180deg) !important; /* **Substitui** o transform da animação */  
+    cursor: pointer;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Esconde a face de trás quando não está voltada para o usuário */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+    background-color: #f0f0f0;
+    color: #333; 
+}
+  
+.card-back {
+    background-color: #333;
+    color: white;
+    transform: rotateY(180deg); /* Inicialmente gira o verso para estar "atrás" da frente */
+    text-align: justify;
+}
+
+.card-back p{
+    margin: 20px;
+    font-family: 'Roboto-VariableFont_wdth,wght';
+}
+
+.card-back h3{
+    font-family: 'Roboto-VariableFont_wdth,wght';
+}
+
+#card-1-back{
+    background-image: url(imgs/QWc9.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#card-2-back{
+    background-image: url(imgs/QWc9.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#card-3-back{
+    background-image: url(imgs/QWc9.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* GIF PONTEIRO */
+#pointer-gif{
+    z-index: 1000;
+    position: absolute;
+    bottom: -130%;
+    right: 38%;
+}
+
+#pointer-gif img{
+    width: 150px;
+}
+
