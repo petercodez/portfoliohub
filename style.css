@@ -61,6 +61,7 @@ nav img{
 }
 
 nav{
+    position: relative;
     display: flex;
     justify-content: center;
     gap: 20px;
