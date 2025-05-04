@@ -1,0 +1,72 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+@font-face {
+    font-family: 'TechnoRace';
+    src: url(fonts/TechnoRace-Italic.otf);
+}
+
+header{
+    background: #234175;
+    background: linear-gradient(180deg, rgba(35, 65, 117, 1) 0%, rgba(106, 9, 121, 1) 73%, rgb(122, 50, 140) 95%);
+    height: 680px;
+    position: relative;
+}
+
+
+header h1{
+    font-family: 'TechnoRace';
+    font-size: 85px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top: 25px;
+}
+
+#banner-img{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+
+nav img{
+    width: 30px;
+    padding: 10px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'TechnoRace';
+    font-size: 20px;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.divider{
+    aspect-ratio: 960/540;
+    background-repeat: no-repeat center;
+    background-size: cover;
+    background-position: bottom;
+    position: absolute;
+    height: 116.59vh;
+    background-image: url(imgs/wave-haikei-correct.svg);
+}
+
+
+
+#about-me{
+    margin-top: 300px;
+    color: black;
+}
