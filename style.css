@@ -85,7 +85,7 @@ nav a{
     background-size: cover;
     background-position: bottom;
     position: absolute;
-    height: 116.59vh;
+    height: 112.44vh;
     background-image: url(imgs/wave-haikei-correct.svg);
 }
 
@@ -109,13 +109,14 @@ nav a{
     justify-content: center;
     padding: 100px;
     gap: 60px;
+    height: 456px;
 }
 
 #card-controller h1{
     text-align: center !important;
     font-family: 'TechnoRace';
     position: absolute;
-    top: 171%;
+    top: 165%;
     font-size: 55px;
     color: white;
     
@@ -240,7 +241,7 @@ nav a{
 #pointer-gif{
     z-index: 1000;
     position: absolute;
-    bottom: -130%;
+    bottom: -120%;
     right: 38%;
 }
 
